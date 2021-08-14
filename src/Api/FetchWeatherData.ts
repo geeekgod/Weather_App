@@ -10,7 +10,7 @@ const FetchWeatherData = async (request:string) =>{
     const weatherData = await axios.get(apiUrl,{
         params:{
             q: request,
-            units: "metrics",
+            units: "metric",
             APPID: apiKey
         }
     });

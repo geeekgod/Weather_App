@@ -18,12 +18,12 @@ const dummyData: isWeather = {
   ],
   "base": "stations",
   "main": {
-    "temp": 282.55,
-    "feels_like": 281.86,
-    "temp_min": 280.37,
-    "temp_max": 284.26,
-    "pressure": 1023,
-    "humidity": 100
+    "temp": 19.2,
+    "feels_like": 19.11,
+    "temp_min": 13.7,
+    "temp_max": 24.42,
+    "pressure": 1019,
+    "humidity": 74
   },
   "visibility": 16093,
   "wind": {
