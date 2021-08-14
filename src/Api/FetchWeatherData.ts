@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import axios from 'axios';
+import isWeather from '../Interface/interface';
 dotenv.config()
 
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
@@ -14,7 +15,9 @@ const FetchWeatherData = async (request:string) =>{
         }
     });
 
-    return weatherData;
+    const finalData: isWeather = weatherData.data;
+
+    return finalData;
 }
 
 export default FetchWeatherData;
