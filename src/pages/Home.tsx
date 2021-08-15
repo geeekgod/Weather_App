@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import FetchWeatherData from "../Api/FetchWeatherData";
 import isWeather from "../Interface/interface";
 import "./home.css";
@@ -18,6 +18,10 @@ export const Home = () => {
       console.log(weather.main);
     }
   };
+
+  useEffect(()=>{
+      window.scrollTo(0, 0);
+  })
   return (
     <div className="Home">
       <div className="section-header">
@@ -41,12 +45,11 @@ export const Home = () => {
                   <span>{weather.name}</span>
                   <sup>{weather.sys.country}</sup>
                 </h2>
-                <div className="city-temperature">
-                  {Math.round(weather.main.temp)}
-                  <sup>&deg;C</sup>
-                  <div className="info">
+                <div className="temperature">
+                  <p className="obsolute-temp">{Math.round(weather.main.temp)}<sup>&deg;C</sup></p>
+                  <div className="weather-info">
                     <img
-                      className="city-icon"
+                      className="icon"
                       src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                       alt={weather.weather[0].description}
                     />

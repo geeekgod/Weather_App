@@ -1,9 +1,10 @@
 .Home{
     color: #fff;
+    padding: 1rem 0 5rem 0;
 }
 .Home .section-header{
     text-align: center;
-    padding: 1.2rem 0;
+    padding: .5rem 0;
 }
 .Home .section-header .head{
     font-size: 30px;
@@ -30,6 +31,7 @@
     border: 1px solid rgba(256, 256, 256,0.8);
     transition: all ease-in-out 0.4s;
     border-radius: 20px;
+    font-weight: 500;
 }
 .Home .weather-card input:hover{
     border: 1px solid transparent;
@@ -38,10 +40,34 @@
 .Home ::-webkit-input-placeholder{
     color: #fff;
 }
-.Home .weather-card input:hover ::-webkit-input-placeholder{
-    color: #000;
-}
 .Home .weather-card input:focus{
     border: 1px solid transparent;
     background: rgba(256, 256, 256,0.8);
+}
+.Home .temperature .obsolute-temp{
+    font-size: 36px;
+    font-weight: 600;
+    margin: 5px 0;
+}
+.Home .weather-info{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+.Home .weather-info img{
+    width: 60%;
+    margin: auto;
+}
+.Home .city-name sup{
+    background: #FFAFCC;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    position: relative;
+    top: -5px;
+    left: 5px;
+}
+.Home .weather-info p{
+    font-size: 20px;
+    margin: 0;
 }
