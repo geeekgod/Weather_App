@@ -14,6 +14,9 @@ export const Home = () => {
       if (data !== null) {
         setWeather(data);
       }
+      if(data == null){
+        console.log("hello");
+      }
       console.log(data);
       setSearchWeather("");
       console.log(weather.main);

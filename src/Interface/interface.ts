@@ -43,5 +43,9 @@ interface isWeather {
   cod: number,
 }
 
+export interface notFound{
+  cod: string,
+  message : string
+}
 
-export default isWeather;
+export default isWeather ;

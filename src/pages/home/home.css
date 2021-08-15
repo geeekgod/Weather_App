@@ -87,3 +87,6 @@
     color: #fff;
     border-bottom: solid 1px #fff;
 }
+:hover::-webkit-input-placeholder{
+    color: #000;
+}
