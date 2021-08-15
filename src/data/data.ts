@@ -1,6 +1,6 @@
 import isWeather from "../Interface/interface";
 
-const dummyData: isWeather = {
+export const dummyData: isWeather = {
   coord: {
     lon: -122.08,
     lat: 37.39,
@@ -45,4 +45,8 @@ const dummyData: isWeather = {
   cod: 200,
 };
 
-export default dummyData;
+export const data = {
+    profilePic : "https://thefrontendrish.tech/assets/vendor/img/profile-pic.png",
+}
+
+export default {dummyData , data};

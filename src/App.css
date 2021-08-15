@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 html{
   background-color: rgba(23, 39, 85,0.93);
+  /* background: url("https://cdn.dribbble.com/users/925716/screenshots/3333720/attachments/722375/night.png?compress=1&resize=400x300") center center no-repeat; */
+  /* background: url("https://images.unsplash.com/photo-1528818955841-a7f1425131b5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c3RhcnJ5JTIwc2t5fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80") center center no-repeat; */
+  background-size: cover;
 }
 h1,h2,h3,h4,h5,h6,p,input,div{
   font-family: 'Rubik', sans-serif;

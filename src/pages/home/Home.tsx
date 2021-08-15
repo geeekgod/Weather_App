@@ -1,27 +1,32 @@
 import React, { useState, useEffect } from "react";
-import FetchWeatherData from "../Api/FetchWeatherData";
-import isWeather from "../Interface/interface";
+import FetchWeatherData from "../../Api/FetchWeatherData";
+import isWeather from "../../Interface/interface";
 import "./home.css";
-import dummyData from "../data/data";
+import {dummyData} from '../../data/data'
+import {Link} from 'react-router-dom';
 
 export const Home = () => {
-  const [query, setQuery] = useState("");
+  const [searchWeather, setSearchWeather] = useState("");
   const [weather, setWeather] = useState(dummyData);
   const search = async (e: any) => {
     if (e.key === "Enter") {
-      const data: isWeather = await FetchWeatherData(query);
+      const data: isWeather = await FetchWeatherData(searchWeather);
       if (data !== null) {
         setWeather(data);
       }
       console.log(data);
-      setQuery("");
+      setSearchWeather("");
       console.log(weather.main);
     }
   };
 
-  useEffect(()=>{
-      window.scrollTo(0, 0);
-  })
+  useEffect(() => {
+     document.title = "Weather App";
+     window.scrollTo({
+       top : 0,
+       behavior : 'smooth'
+     });
+  },[]);
   return (
     <div className="Home">
       <div className="section-header">
@@ -35,8 +40,8 @@ export const Home = () => {
               type="text"
               className="search"
               placeholder="Enter a place ...."
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
+              value={searchWeather}
+              onChange={(event) => setSearchWeather(event.target.value)}
               onKeyPress={search}
             />
             {weather.main && (
@@ -60,6 +65,10 @@ export const Home = () => {
             )}
           </div>
         </div>
+      </div>
+    
+      <div className="credits">
+          <Link to="/rishabh"><p>By Rishabh Singh</p></Link>
       </div>
     </div>
   );

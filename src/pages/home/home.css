@@ -1,6 +1,6 @@
 .Home{
     color: #fff;
-    padding: 1rem 0 5rem 0;
+    padding: 1rem 0 0 0;
 }
 .Home .section-header{
     text-align: center;
@@ -49,6 +49,9 @@
     font-weight: 600;
     margin: 5px 0;
 }
+.Home .temperature .obsolute-temp sup{
+    font-size: 22px;
+}
 .Home .weather-info{
     display: flex;
     flex-direction: column;
@@ -70,4 +73,17 @@
 .Home .weather-info p{
     font-size: 20px;
     margin: 0;
+}
+.Home .credits{
+    padding: 1rem 0 3rem 0;
+    text-align: center;
+}
+.Home .credits a{
+    color: rgba(256, 256, 256,0.7);
+    text-decoration: none;
+    transition: all ease-in-out 0.4s;
+}
+.Home .credits a:hover{
+    color: #fff;
+    border-bottom: solid 1px #fff;
 }
