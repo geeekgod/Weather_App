@@ -90,3 +90,6 @@
 :hover::-webkit-input-placeholder{
     color: #000;
 }
+:focus::-webkit-input-placeholder{
+    color: #000;
+}
